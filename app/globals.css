@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ================================
+   THEME TOKENS (LIGHT / DARK)
+================================ */
+
+@layer theme {
+  :root {
+    /* Backgrounds */
+    --bg: theme(colors.white);
+    --bg-muted: theme(colors.gray.50);
+    --bg-card: theme(colors.white);
+
+    /* Text */
+    --text: theme(colors.gray.900);
+    --text-muted: theme(colors.gray.600);
+
+    /* Borders */
+    --border: theme(colors.gray.200);
+
+    /* Accent (can change later globally) */
+    --accent: theme(colors.gray.900);
+    --accent-muted: theme(colors.gray.700);
+  }
+
+  .dark {
+    --bg: theme(colors.gray.950);
+    --bg-muted: theme(colors.gray.900);
+    --bg-card: theme(colors.gray.900);
+
+    --text: theme(colors.gray.100);
+    --text-muted: theme(colors.gray.400);
+
+    --border: theme(colors.gray.800);
+
+    --accent: theme(colors.gray.100);
+    --accent-muted: theme(colors.gray.300);
+
+    --font-body: theme(fontFamily.sans);
+    --font-heading: theme(fontFamily.sans);
+  }
+}
+
+/* ================================
+   GLOBAL FONT USAGE
+================================ */
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+button {
+  font-family: var(--font-heading);
+}
+
+/* ================================
+   UTILITIES
+================================ */
+@layer utilities {
+  .bg-bg {
+    background-color: var(--bg);
+  }
+  .bg-muted {
+    background-color: var(--bg-muted);
+  }
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+
+  .text-text {
+    color: var(--text);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .border-border {
+    border-color: var(--border);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+}
